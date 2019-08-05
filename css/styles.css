@@ -1,8 +1,8 @@
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .car-body{
       width: 100%;
     }
-  } */
+  }
 @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
 body{
     color: 0 solid black;
@@ -11,7 +11,7 @@ body{
     font-weight: bold;
 }
 .jumbotron{
-background-image: url("https://i.pinimg.com/originals/b5/1a/b9/b51ab9ccbda26ec4ab428748ea5e2cb8.jpg");
+    background-image: url("file:///home/wecode/Documents/PizzaApp/images/pi.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 200px;
