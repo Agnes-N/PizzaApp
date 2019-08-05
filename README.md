@@ -16,7 +16,7 @@ You can order the pizza you want and get delivered to you.
 * get ubuntu or any other terminal to use
 * cd Documents
 * cd PizzaApp
-* git clone
+* git clone https://github.com/Agnes-N/PizzaApp.git
 * code .
 
 ## Behavior Driven Development
