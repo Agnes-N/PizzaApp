@@ -9,7 +9,6 @@ function Order (pizzaSize, crust) {
  this.Topping3 = 500;
  this.pizzaPrice = 0;
  this.deliveryCharge  = 2000;
-//  this.pizzaNumbers = [];
 }
 Order.prototype.pizzaCost = function () {
  if (this.pizzaSize === "Small") {
@@ -26,14 +25,9 @@ Order.prototype.pizzaCost = function () {
  } else if (this.crust === "glutenFree") {
    this.pizzaPrice += 2000;
  }
-//  for(var j = 1; j < this.pizzaNumbers.length; j++){
-//    pizzaNumber += pizzaNumbers[j];
-//      }
  this.pizzaPrice += this.Topping1;
  this.pizzaPrice += this.Topping2;
  this.pizzaPrice += this.Topping3;
-//  this.pizzaPrice *= this.pizzaNumber;
-//   this.pizzaPrice *= this.pizzaNumbers;
  return this.pizzaPrice;
 }
 Order.prototype.finalCost = function () {
@@ -60,7 +54,6 @@ $(document).ready(function() {
    var Topping1 = $("select#Topping1").val();
    var Topping2 = $("select#Topping2").val();
    var Topping3 = $("select#Topping3").val();
-//    var pizzaNumbers = $("input#pizza-number").val();
    var pizzaDetails = (pizzaSize + ": " + crust + ", " + Topping1 + ", " + Topping2 + ", " + Topping3);
    var newPizzaOrder = new Order(pizzaSize, crust);
    newPizzaOrder.pizzaCost();
@@ -74,7 +67,6 @@ $(document).ready(function() {
    $("#pizzaDetail").toggle();
    $("#deliver").toggle();
    $("#pickup").show();
-//    $("#pickup").hide();
    $("#checkout").hide();
    $("#deliveryPrice").hide();
  });
