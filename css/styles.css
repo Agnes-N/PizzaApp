@@ -14,7 +14,7 @@ body{
 background-image: url("file:///home/wecode/Documents/PizzaApp/images/pi.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px;
+    padding: 200px;
     color: white;
 }
 .card{

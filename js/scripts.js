@@ -8,7 +8,7 @@ function Order (pizzaSize, crust) {
  this.Topping2 = 1000;
  this.Topping3 = 500;
  this.pizzaPrice = 0;
-//  this.pizzaNumber  = 1;
+ this.deliveryCharge  = 2000;
 //  this.pizzaNumbers = [];
 }
 Order.prototype.pizzaCost = function () {
@@ -43,12 +43,14 @@ Order.prototype.finalCost = function () {
  }
  return TotalPrice;
 }
-// Order.prototype.numberOfPizza = function () {
-//     for(var j = 1; j < pizzaNumbers.length; j++){
-//         var  pizzaNumber = finalCost() * pizzaNumber[j];
-//     }
-//         return pizzaNumber;
-//       }
+Order.prototype.tatolCharge = function(){
+    var checkout =0;
+    checkout+=PizzatotalPrice[i];
+    return checkout;
+}
+Order.prototype.tatolCharge = function(){
+    return this.deliveryCharge;
+}
 //User Interface Logic
 $(document).ready(function() {
  $("form#pizzaOrder").submit(function(event) {
@@ -71,7 +73,8 @@ $(document).ready(function() {
  $("#pizzaDetails").click(function() {
    $("#pizzaDetail").toggle();
    $("#deliver").toggle();
-   $("#pickup").toggle();
+   $("#pickup").show();
+//    $("#pickup").hide();
    $("#checkout").hide();
    $("#deliveryPrice").hide();
  });
@@ -80,7 +83,7 @@ $("button#deliver").click(function(event){
    alert("Delivery cost is" + " " + del);
    var location = prompt("Enter your address:");
    alert("We will deliver your order at" + " " + location);
-   $("#deliveryPrice").append("<p>" + "Delivery cost is" + " " + del + "rwf" + "</p>");
+   $("#deliveryPrice").append("<p>" + "Delivery cost is" + " " + del + "rwf" + " " + "</p>");
    $("#deliveryPrice").show();
    $("#pickup").hide();
    $("#checkout").show();
@@ -88,12 +91,16 @@ $("button#deliver").click(function(event){
 $("button#pickup").click(function(event){
    event.preventDefault();
    alert("Thank you for shopping with us!!!!!");
-   $("#checkout").show();
+   $("#pick").append("<p>" + "You will pay" + " " + PizzatotalPrice + "rwf" + "</p>")
 })
-$("button#checkout").click(function(event){
-   event.preventDefault();
-   var check = TotalPrice + del;
-   $("#check").text(check);
-   // console.log(check);
-})
+
+var talalAmount = new Order();
+  $("button#checkout").click(function(event) {
+    event.preventDefault();
+    talalAmount.tatolCharge();
+    PizzatotalPrice.push(talalAmount.deliveryCharge);
+    $("#check").text(talalAmount.finalCost());
+    
+
+  });
 })
