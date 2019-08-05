@@ -91,7 +91,8 @@ $("button#deliver").click(function(event){
 $("button#pickup").click(function(event){
    event.preventDefault();
    alert("Thank you for shopping with us!!!!!");
-   $("#pick").append("<p>" + "You will pay" + " " + PizzatotalPrice + "rwf" + "</p>")
+   $("#pick").append("<p>" + "Your total charge is" + " " + PizzatotalPrice + "rwf" + "</p>")
+
 })
 
 var talalAmount = new Order();
