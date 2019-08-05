@@ -45,7 +45,7 @@ Order.prototype.tatolCharge = function(){
 Order.prototype.tatolCharge = function(){
     return this.deliveryCharge;
 }
-//User Interface Logic
+//UI Logic
 $(document).ready(function() {
  $("form#pizzaOrder").submit(function(event) {
      event.preventDefault();
