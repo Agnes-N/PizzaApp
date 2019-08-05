@@ -91,6 +91,7 @@ $("button#deliver").click(function(event){
 $("button#pickup").click(function(event){
    event.preventDefault();
    alert("Thank you for shopping with us!!!!!");
+   $("#total").hide();
    $("#pick").append("<p>" + "You will pay" + " " + PizzatotalPrice + "rwf" + "</p>")
 })
 
