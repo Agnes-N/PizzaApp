@@ -38,6 +38,7 @@ It used HTML, CSS, Javascript, Bootstrap and jQuery.
 ## Support and contact details
 
 For any issues or questions, ideas or concern, please contact me on my e-mail: aggyreina@gmail.com.
+check it out:  https://agnes-n.github.io/PizzaApp/
 
 ### License
 
